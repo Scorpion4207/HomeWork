@@ -218,7 +218,7 @@ video {
 
 .main__wrapper {
     display: flex;
-    gap: 127px;
+    gap: 30px;
     align-items: start;
     justify-content: space-between;
 }
