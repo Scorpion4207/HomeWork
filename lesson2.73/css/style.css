@@ -220,6 +220,7 @@ video {
     display: flex;
     gap: 127px;
     align-items: start;
+    justify-content: space-between;
 }
 
 .main__body {
@@ -238,6 +239,7 @@ video {
     max-width: 282px;
     width: 100%;
     min-height: 80vh;
+    min-width: 210px;
 }
 
 
@@ -257,6 +259,7 @@ video {
 
 .main__body {
     width: 100%;
+    max-width: 792px;
 }
 
 .gallery {
