@@ -219,6 +219,7 @@ body {
     border: 2px solid var(--button);
     min-width: 210px;
     max-height: 60vh;
+    min-height: 400px;
 }
 
 
