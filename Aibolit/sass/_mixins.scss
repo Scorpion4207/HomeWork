@@ -1,0 +1,66 @@
+%text-header {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.0;
+  color: var(--brown-light);
+}
+
+// ==============================================================
+
+%h4-section1 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--brown);
+}
+
+%text-section1 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.0;
+  color: var(--brown);
+}
+
+%h3-section2-4-6 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--text);
+}
+
+%h4-section2-4-6 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+%text-section2-4-6 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--brown);
+}
+
+%text-orange-section2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.0;
+  color: var(--orange);
+}
+
+// =============================================================================
+%text-footer {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--footer);
+}
