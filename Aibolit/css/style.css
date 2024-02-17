@@ -118,7 +118,7 @@ address {
   --second-family: "Playfair Display", sans-serif;
 }
 
-.nav__list {
+.splide__pagination__page.is-active, .splide__pagination__page, .nav__list {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
@@ -383,4 +383,37 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+/*================header__hero=============================*/
+.splide__pagination--ttb {
+  right: auto;
+  left: 2%;
+  gap: 70px;
+}
+
+.splide__pagination__page {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.splide__pagination__page.is-active {
+  background: transparent;
+  color: #59443F;
+  position: relative;
+}
+
+.splide__pagination__page.is-active::before {
+  content: url(../img/icon/process.svg);
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

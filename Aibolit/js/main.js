@@ -1,4 +1,5 @@
 (() => {
+  // =============================Модальное окно с городами===============================
   document.addEventListener('click', modalInit)
   function modalInit(e) {
     const modalOpen = e.target.closest('.header__geolocation')
@@ -41,7 +42,30 @@
 
     modalLink.classList.add('modal__link--active')
     cityContent.classList.add('header__geolocation-city--show')
-
   }
+
+  // ==============================Слайдер header__hero
+  const headerSlider = new Splide('#header__hero-splide',{
+    arrows: false,
+    direction: 'ttb',
+    height   : '40rem',
+    wheel: true,
+    type: 'fraction',
+  })
+
+  headerSlider.on( 'pagination:mounted', function ( data ) {
+    // You can add your class to the UL element
+    data.list.classList.add( 'splide__pagination--custom' );
+  
+    // `items` contains all dot items
+    data.items.forEach( function ( item ) {
+      item.button.textContent = String( item.page + 1 );
+    } );
+  } );
+    
+
+  
+  headerSlider.mount();
+
 
 })()

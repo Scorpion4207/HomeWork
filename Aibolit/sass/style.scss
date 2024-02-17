@@ -211,3 +211,39 @@
 .header__geolocation-city--show {
   display: flex;
 }
+
+/*================header__hero=============================*/
+
+.header__hero-slide {
+
+}
+
+
+
+.splide__pagination--ttb {
+  right: auto;
+  left: 2%;
+  gap: 70px;
+  
+}
+
+.splide__pagination__page{
+  background: transparent;
+  @extend %text-header;
+  display: flex;
+  justify-content: center;
+}
+.splide__pagination__page.is-active{
+  background: transparent;
+  @extend %text-header;
+  color: #59443F;
+  position: relative;
+}
+.splide__pagination__page.is-active::before{
+  content: url(../img/icon/process.svg);
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

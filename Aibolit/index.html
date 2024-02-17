@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/splide.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Aibolit</title>
 </head>
@@ -13,7 +14,6 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-
           <div class="header__top-inner">
             <a class="header__logo" href="/">
               <img src="img/icon/logo-dark.svg" alt="Лого Aibolit">
@@ -81,6 +81,25 @@
           </div>
         </div>
       </div>
+      <div class="header__hero">
+        <div class="container">
+          <div class="header__hero-inner">
+            <section id="header__hero-splide" class="splide" aria-label="Splide Basic HTML Example">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                  <li class="header__hero-slide splide__slide">Slide 01</li>
+                </ul>
+                
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="main">
 
@@ -116,7 +135,9 @@
       </ul>
     </div>
   </div>
-  <script src="js/main.js"></script>
+
 </body>
+<script src="js/splide.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
