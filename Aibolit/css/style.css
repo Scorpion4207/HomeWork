@@ -270,6 +270,26 @@ address {
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
+.header__geolocation {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+}
+.header__geolocation-city {
+  display: none;
+}
+.header__geolocation-city--show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .nav__logo {
   -ms-flex-item-align: center;
@@ -353,6 +373,7 @@ address {
   opacity: 0;
   visibility: hidden;
   text-transform: none;
+  z-index: 1;
 }
 .additional__nav-item {
   -webkit-transition: all 0.5s;
@@ -360,29 +381,6 @@ address {
 }
 .additional__nav-item:hover {
   font-size: 20px;
-}
-
-.header__geolocation {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
-  text-transform: uppercase;
-}
-
-.header__geolocation-city {
-  display: none;
-}
-
-.header__geolocation-city--show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 /*================header__hero=============================*/

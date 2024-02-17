@@ -105,6 +105,23 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
   }
+  &__geolocation {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @extend %text-orange-section2;
+    text-transform: uppercase;
+  }
+  
+  &__geolocation-city {
+    display: none;
+  }
+  
+  &__geolocation-city--show {
+    display: flex;
+  }
+  
 }
 
 .nav {
@@ -184,6 +201,7 @@
     opacity: 0;
     visibility: hidden;
     text-transform: none;
+    z-index: 1;
   }
 
   &__nav-item {
@@ -195,29 +213,8 @@
   }
 }
 
-.header__geolocation {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  @extend %text-orange-section2;
-  text-transform: uppercase;
-}
-
-.header__geolocation-city {
-  display: none;
-}
-
-.header__geolocation-city--show {
-  display: flex;
-}
 
 /*================header__hero=============================*/
-
-.header__hero-slide {
-
-}
-
 
 
 .splide__pagination--ttb {
