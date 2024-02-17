@@ -8,8 +8,115 @@
   <title>Aibolit</title>
 </head>
 
-<body>
+<body class="body">
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
 
+          <div class="header__top-inner">
+            <a class="header__logo" href="/">
+              <img src="img/icon/logo-dark.svg" alt="Лого Aibolit">
+            </a>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Личный кабинет
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link--nav" href="#">
+                    О нас
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.42871 6.99998C8.42871 6.78492 8.34468 6.56988 8.17697 6.40591L2.89675 1.24617C2.56086 0.917943 2.01628 0.917943 1.68052 1.24617C1.34477 1.57426 1.34477 2.10632 1.68052 2.43458L6.35275 6.99998L1.68069 11.5654C1.34494 11.8936 1.34494 12.4256 1.68069 12.7537C2.01644 13.0821 2.56102 13.0821 2.89691 12.7537L8.17713 7.59405C8.34487 7.43 8.42871 7.21496 8.42871 6.99998Z"
+                        fill="#FFC59E" stroke="#FFC59E" />
+                    </svg>
+                  </a>
+                  <ul class="additional__nav-list">
+                    <li class="additional__nav-item">
+                      <a class="additional__nav-link" href="#">
+                        Услуги и цены
+                      </a>
+                    </li>
+                    <li class="additional__nav-item">
+                      <a class="additional__nav-link" href="#">
+                        Коллектив
+                      </a>
+                    </li>
+                    <li class="additional__nav-item">
+                      <a class="additional__nav-link" href="#">
+                        История компании
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Новости и акции
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Контакты
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Блог
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__geolocation" href="#">
+              <svg width="20" height="30" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5275 7.22578C19.4242 6.83847 19.2143 6.42579 19.0591 6.06447C17.2014 1.59998 13.1424 0 9.8649 0C5.47743 0 0.64515 2.94199 0 9.00612V10.2451C0 10.2968 0.0178196 10.7612 0.0431315 10.9935C0.404788 13.8836 2.68522 16.955 4.38835 19.845C6.22066 22.9414 8.12196 25.9873 10.0056 29.032C11.1671 27.0451 12.3245 25.0321 13.4595 23.0966C13.7689 22.5286 14.128 21.961 14.4377 21.4188C14.6441 21.0578 15.0384 20.6969 15.2185 20.361C17.0508 17.0064 20 13.6258 20 10.2967V8.92904C20.0001 8.56812 19.5527 7.3036 19.5275 7.22578ZM9.94522 13.4452C8.65553 13.4452 7.24387 12.8003 6.54708 11.0194C6.44327 10.7359 6.45164 10.1678 6.45164 10.1157V9.31573C6.45164 7.04536 8.3794 6.0129 10.0565 6.0129C12.1211 6.0129 13.7179 7.66472 13.7179 9.72936C13.7179 11.7939 12.0099 13.4452 9.94522 13.4452Z"
+                  fill="#FFC59E" />
+              </svg>
+              <p class="header__geolocation-city header__geolocation-city--show" id="city1">Волгоград</p>
+              <p class="header__geolocation-city " id="city2">Грозный</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <div class="modal">
+    <div class="modal__window">
+      <div class="modal__cancel">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.40039 8.60039L5.00039 5.00039L8.60039 1.40039" stroke="#C3B9B5" stroke-width="2"
+            stroke-miterlimit="10" stroke-linecap="round" />
+          <path d="M1.40039 1.40039L5.00039 5.00039L8.60039 8.60039" stroke="#C3B9B5" stroke-width="2"
+            stroke-miterlimit="10" stroke-linecap="round" />
+        </svg>
+      </div>
+      <h3 class="modal__title">
+        Ваш город
+      </h3>
+      <ul class="modal__list">
+        <li class="modal__item">
+          <a href="#city1" class="modal__link modal__link--active">
+            Волгоград
+          </a>
+        </li>
+        <li class="modal__item">
+          <a href="#city2" class="modal__link">
+            Грозный
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
