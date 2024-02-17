@@ -77,11 +77,16 @@
     margin-bottom: 60px;
   }
 
+  &__item {
+    margin-bottom: 40px;
+  }
+
   &__link {
     @extend %text-section1;
     background: transparent;
     transition: all .5s;
   }
+
   &__link:hover {
     font-size: 25px;
   }
@@ -90,38 +95,6 @@
 .body--modal-opened .modal {
   opacity: 1;
   visibility: visible;
-}
-
-
-/* Что бы поменять цвет иконки тут случай другой мы посмотрели 
-в путь с иконкой и fill там не работает, цвет там дан 
-с помощью stroke: #AC907A; и задаем path,rect цвет и время*/
-.modal__cancel path,
-.modal__cancel rect {
-  transition: all .5s;
-}
-
-.modal__cancel:hover path,
-.modal__cancel:hover rect {}
-
-/* блок с фоткой мы выносим вверх на -65px и отступ слева и снизу */
-.modal__img {
-  margin: -65px 0 15px 13px;
-  /* Задаем макс ширину что бы картинка уменьшалась */
-  max-width: 100%;
-}
-
-
-
-
-.modal__link {}
-
-.modal__item {
-  margin-bottom: 40px;
-}
-
-.modal__form-label {
-  margin-bottom: 10px;
 }
 
 /*=====================header__top ==========================*/
