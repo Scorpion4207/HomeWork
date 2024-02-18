@@ -273,7 +273,7 @@ address {
 
 /*=====================header__top ==========================*/
 .header__top-inner {
-  padding: 65px 0 130px;
+  padding: 65px 0px 130px;
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
