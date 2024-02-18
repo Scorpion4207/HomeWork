@@ -101,7 +101,7 @@
 
 .header {
   &__top-inner {
-    padding: 65px 0px 130px;
+    padding: 65px 15px 130px;
     display: grid;
     grid-template-columns: auto 1fr auto;
   }
@@ -219,7 +219,7 @@
 
 .splide__pagination--ttb {
   right: auto;
-  left: 2%;
+  left: 3%;
   gap: 70px;
   justify-content: start;
 }
