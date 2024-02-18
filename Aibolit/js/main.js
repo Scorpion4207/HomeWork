@@ -48,7 +48,7 @@
   const headerSlider = new Splide('#header__hero-splide',{
     arrows: false,
     direction: 'ttb',
-    height   : '40rem',
+    height   : '49rem',
     wheel: true,
     type: 'fraction',
   })

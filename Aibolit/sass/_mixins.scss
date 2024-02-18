@@ -9,6 +9,14 @@
 
 // ==============================================================
 
+%h1-header {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.37;
+  color: var(--text);
+}
+
 %h4-section1 {
   font-family: var(--second-family);
   font-weight: 400;
