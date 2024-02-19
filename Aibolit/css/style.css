@@ -732,3 +732,8 @@ address {
     display: flex;
   }
 }
+@media (max-width: 500px) {
+  .header__geolocation p {
+    display: none;
+  }
+}
