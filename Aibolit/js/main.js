@@ -44,7 +44,21 @@
     cityContent.classList.add('header__geolocation-city--show')
   }
 
-  // ==============================Слайдер header__hero
+// =============================Бургер===============================
+  document.addEventListener('click', burgerInit)
+  function burgerInit(e) {
+      const burgerIcon = e.target.closest('.burger-icon')
+      if (!burgerIcon && !burgerNavLink) return
+      if (document.documentElement.clientWidth > 1200) return
+      if (!document.body.classList.contains('body--opened-menu')) {
+          document.body.classList.add('body--opened-menu')
+      } else {
+          document.body.classList.remove('body--opened-menu')
+      }
+  }
+
+
+  // ==============================Слайдер header__hero===========================
   const headerSlider = new Splide('#header__hero-splide',{
     arrows: false,
     direction: 'ttb',
@@ -63,8 +77,6 @@
     } );
   } );
     
-
-  
   headerSlider.mount();
 
 
