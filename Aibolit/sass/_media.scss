@@ -233,5 +233,62 @@
       padding: 20px;
     }
   }
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: #00000070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
   
+    &__window {
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 45px 70px;
+      margin: 0 15px 0;
+      max-width: 400px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    &__cancel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      transition: 0.5s;
+      padding: 5px;
+    }
+  
+    &__cancel:hover path,
+    rect {
+      stroke: #59443F;
+    }
+  
+    &__title {
+      @extend %h4-section2-4-6;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+  
+    &__item {
+      margin-bottom: 40px;
+    }
+  
+    &__link {
+      @extend %text-section1;
+      background: transparent;
+      transition: all .5s;
+    }
+  
+    &__link:hover {
+      font-size: 25px;
+    }
+  }
 }
