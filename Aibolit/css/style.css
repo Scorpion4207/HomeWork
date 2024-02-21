@@ -408,6 +408,106 @@ address {
   font-size: 20px;
 }
 
+/*===============================Акордеон==============================*/
+.accordion-list {
+  display: none;
+  width: 100%;
+}
+.accordion-list__control-icon path {
+  stroke: #fff;
+  fill: #fff;
+}
+.accordion-list__item {
+  border-top: 1px solid var(--brown);
+  background: transparent;
+  text-align: center;
+}
+.accordion-list__item:last-child {
+  margin-bottom: 0px;
+}
+.accordion-list__control {
+  text-align: center;
+  padding: 33px;
+  background: transparent;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.accordion-list__control:hover {
+  color: var(--brown);
+}
+.accordion-list__item--opened .accordion-list__control {
+  padding: 20px 30px;
+  color: var(--brown);
+}
+.accordion-list__control-icon path {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.accordion-list__control:hover .accordion-list__control-icon path {
+  fill: var(--brown);
+  stroke: var(--brown);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.accordion-list__item--opened .accordion-list__control-icon {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.accordion-list__item--opened .accordion-list__control-icon path {
+  fill: var(--brown);
+  stroke: var(--brown);
+}
+.accordion-list__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.accordion-list__item--opened .accordion-list__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.accordion-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.additional__nav-item {
+  padding: 20px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.additional__nav-item:hover {
+  color: var(--brown);
+}
+
+.additional__nav-item:last-child {
+  padding: 20px 0 40px;
+}
+
 /*======================бургер меню====================================*/
 .burger-icon {
   display: none;
@@ -648,7 +748,7 @@ address {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 60px 40px;
+    gap: 0 40px;
   }
 }
 @media (max-width: 1200px) {
@@ -657,6 +757,7 @@ address {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 25px 15px 130px;
   }
   .header__geolocation {
     justify-self: center;
@@ -690,9 +791,26 @@ address {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
   .nav__item {
     padding: 0;
+    border-top: 1px solid var(--brown);
+    padding: 40px;
+    width: 100%;
+  }
+  .nav__item:last-child {
+    border-bottom: 1px solid var(--brown);
+  }
+  .nav__item:nth-child(3) {
+    display: none;
+  }
+  .additional__nav-list {
+    display: none;
+  }
+  .accordion-list {
+    display: block;
   }
   .body--opened-menu .header__top-inner {
     grid-template-columns: 1fr auto;
