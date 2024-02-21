@@ -44,68 +44,76 @@
     cityContent.classList.add('header__geolocation-city--show')
   }
 
-// =============================Бургер===============================
+  // =============================Бургер===============================
   document.addEventListener('click', burgerInit)
   function burgerInit(e) {
-      const burgerIcon = e.target.closest('.burger-icon')
-      if (!burgerIcon && !burgerNavLink) return
-      if (document.documentElement.clientWidth > 1200) return
-      if (!document.body.classList.contains('body--opened-menu')) {
-          document.body.classList.add('body--opened-menu')
-      } else {
-          document.body.classList.remove('body--opened-menu')
-      }
+    const burgerIcon = e.target.closest('.burger-icon')
+    if (!burgerIcon) return
+    if (document.documentElement.clientWidth > 1200) return
+    if (!document.body.classList.contains('body--opened-menu')) {
+      document.body.classList.add('body--opened-menu')
+    } else {
+      document.body.classList.remove('body--opened-menu')
+    }
   }
 
   const accordionLists = document.querySelectorAll('.accordion-list');
 
-    accordionLists.forEach(el => {
+  accordionLists.forEach(el => {
 
-        el.addEventListener('click', (e) => {
+    el.addEventListener('click', (e) => {
 
-            const accordionList = e.currentTarget
-            const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
-            const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+      const accordionList = e.currentTarget
+      const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
+      const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
 
-            const accordionControl = e.target.closest('.accordion-list__control')
-            if (!accordionControl) return
-            e.preventDefault();
-            const accordionItem = accordionControl.parentElement;
-            const accordionContent = accordionControl.nextElementSibling;
+      const accordionControl = e.target.closest('.accordion-list__control')
+      if (!accordionControl) return
+      e.preventDefault();
+      const accordionItem = accordionControl.parentElement;
+      const accordionContent = accordionControl.nextElementSibling;
 
-            if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
-                accordionOpenedItem.classList.remove('accordion-list__item--opened');
-                accordionOpenedContent.style.maxHeight = null
-            }
-            accordionItem.classList.toggle('accordion-list__item--opened');
+      if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
+        accordionOpenedItem.classList.remove('accordion-list__item--opened');
+        accordionOpenedContent.style.maxHeight = null
+      }
+      accordionItem.classList.toggle('accordion-list__item--opened');
 
-            if (accordionItem.classList.contains('accordion-list__item--opened')) {
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                accordionContent.style.maxHeight = null
-            }
-        });
+      if (accordionItem.classList.contains('accordion-list__item--opened')) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      } else {
+        accordionContent.style.maxHeight = null
+      }
     });
+  });
 
   // ==============================Слайдер header__hero===========================
-  const headerSlider = new Splide('#header__hero-splide',{
+  const headerSlider = new Splide('#header__hero-splide', {
     arrows: false,
     direction: 'ttb',
-    height   : '49rem',
-    wheel: true,
-    type: 'fraction',
+    height: '49rem',
+    breakpoints: {
+      1550: {
+        direction: null,
+        height: null,
+      },
+      1100: {
+        height: '0rem',
+        pagination: false,
+      }
+    }
   })
 
-  headerSlider.on( 'pagination:mounted', function ( data ) {
+  headerSlider.on('pagination:mounted', function (data) {
     // You can add your class to the UL element
-    data.list.classList.add( 'splide__pagination--custom' );
-  
+    data.list.classList.add('splide__pagination--custom');
+
     // `items` contains all dot items
-    data.items.forEach( function ( item ) {
-      item.button.textContent = String( item.page + 1 );
-    } );
-  } );
-    
+    data.items.forEach(function (item) {
+      item.button.textContent = String(item.page + 1);
+    });
+  });
+
   headerSlider.mount();
 
 

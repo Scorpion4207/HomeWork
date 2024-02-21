@@ -6,6 +6,77 @@
       gap: 0 40px;
     }
   }
+
+  .header__body-content {
+    margin-left: 150px;
+}
+}
+
+@media (max-width: 1550px) {
+  .splide__pagination {
+    display: flex;
+    gap: 70px;
+    transform: translateY(50px);
+  }
+  .header{
+  
+  &__body-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    max-width: 826px;
+  }  
+  &__body-img {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__col-number {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--brown);
+    transition: all .5s;
+    z-index: 1;
+  }
+  
+  &__col-number:hover {
+    filter: drop-shadow(0 5px 20px var(--brown));
+  }
+}
+
+#header-img-slider {
+  max-height: 580px;
+}
+
+#header-img-slider2 {
+  width: 450px;
+  transform: translateX(0px);
+}
+#header-img-slider4 {
+  width: 650px;
+  transform: translateY(-10%);
+}
+
+#header__col-number4 {
+  transform: translateY(-0%);
+}
+
+#header-img-slider6 {
+  max-height: 500px;
+  transform: translateY(0%);
+}
+
+#header__col-number6 {
+  transform: translateY(0%);
+}
 }
 
 @media (max-width: 1200px) {
@@ -19,9 +90,7 @@
 
     &__geolocation {
       justify-self: center;
-    }
-
-    
+    }   
   }
 
   .nav {
@@ -103,6 +172,46 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .header{ 
+    &__top-inner{
+      padding: 25px 15px 80px;
+    }
+    &__body-momil {
+      display: flex;
+    }
+    &__body-title{
+      margin-bottom: 35px;
+      font-size: 75px;
+    }
+    &__body-content {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      align-items: center;
+      margin-left: 0px;
+    }
+    &__col-number {
+      position: relative;
+      margin-bottom: 50px;
+    }
+  }
+
+  .button {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header{ 
+    &__body-title{
+      margin-bottom: 35px;
+      font-size: 12vw;
+    }
+
+  }
+}
+
 @media (max-width: 500px) {
   .header {
     
@@ -119,5 +228,10 @@
     }
   }
   
+  .accordion-list {
+    &__control {
+      padding: 20px;
+    }
+  }
   
 }
