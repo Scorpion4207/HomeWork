@@ -427,7 +427,7 @@ address {
 }
 .accordion-list__control {
   text-align: center;
-  padding: 33px;
+  padding: 20px;
   background: transparent;
   width: 100%;
   display: -webkit-box;
@@ -795,7 +795,6 @@ address {
     text-align: center;
   }
   .nav__item {
-    padding: 0;
     border-top: 1px solid var(--brown);
     padding: 40px;
     width: 100%;
@@ -853,5 +852,10 @@ address {
 @media (max-width: 500px) {
   .header__geolocation p {
     display: none;
+  }
+  .nav__item {
+    border-top: 1px solid var(--brown);
+    padding: 20px;
+    width: 100%;
   }
 }

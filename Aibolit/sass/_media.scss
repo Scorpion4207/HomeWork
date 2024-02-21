@@ -45,7 +45,6 @@
     }
 
     &__item {
-      padding: 0;
       border-top: 1px solid var(--brown);
       padding: 40px;
       width: 100%;
@@ -109,6 +108,14 @@
     
     &__geolocation p{
       display: none;
+    }
+  }
+
+  .nav {
+    &__item {
+      border-top: 1px solid var(--brown);
+      padding: 20px;
+      width: 100%;
     }
   }
   
