@@ -979,10 +979,10 @@ address {
     visibility: hidden;
   }
   .additional__nav-item {
-    padding: 15px 0;
+    padding: 10px 0;
   }
   .additional__nav-item:last-child {
-    padding: 15px 0 15px;
+    padding: 10px 0 20px;
   }
   .body--opened-menu .header__geolocation {
     display: -webkit-box;
@@ -993,7 +993,7 @@ address {
     z-index: 11;
     color: var(--brown);
     position: fixed;
-    bottom: 10%;
+    bottom: 2%;
   }
   .body--opened-menu .header__geolocation path {
     fill: var(--brown);
