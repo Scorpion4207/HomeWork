@@ -974,8 +974,30 @@ address {
   }
 }
 @media (max-width: 500px) {
-  .header__geolocation p {
-    display: none;
+  .header__geolocation {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .additional__nav-item {
+    padding: 15px 0;
+  }
+  .additional__nav-item:last-child {
+    padding: 15px 0 15px;
+  }
+  .body--opened-menu .header__geolocation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    z-index: 11;
+    color: var(--brown);
+    position: fixed;
+    bottom: 10%;
+  }
+  .body--opened-menu .header__geolocation path {
+    fill: var(--brown);
+    stroke: var(--brown);
   }
   .nav__item {
     border-top: 1px solid var(--brown);
