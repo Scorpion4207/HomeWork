@@ -36,6 +36,13 @@
   height: 100%;
 }
 
+.container-1460 {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -150,7 +157,7 @@
     align-items: center;
     gap: 80px;
     @extend %text-header;
-    
+
   }
 
   &__item {
@@ -171,7 +178,8 @@
     visibility: visible;
   }
 
-  &__item:nth-child(3):hover .nav__link--nav path, rect {
+  &__item:nth-child(3):hover .nav__link--nav path,
+  rect {
     stroke: var(--brown);
     fill: var(--brown);
   }
@@ -206,7 +214,7 @@
     top: 100%;
     left: -50%;
     min-width: 300px;
-    padding:30px;
+    padding: 30px;
     background-color: var(--bg);
     border-radius: 16px;
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);
@@ -230,26 +238,27 @@
   }
 }
 
-/*===============================Акордеон==============================*/ 
+/*===============================Акордеон==============================*/
 
 .accordion-list {
   display: none;
   width: 100%;
+
   &__control-icon path {
     stroke: #fff;
     fill: #fff;
   }
-  
+
   &__item {
     border-top: 1px solid var(--brown);
     background: transparent;
     text-align: center;
   }
-  
+
   &__item:last-child {
     margin-bottom: 0px;
   }
-  
+
   &__control {
     text-align: center;
     padding: 33px;
@@ -259,43 +268,44 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    transition: all .5s; 
+    transition: all .5s;
   }
+
   &__control:hover {
     color: var(--brown);
   }
-  
+
   &__item--opened .accordion-list__control {
     padding: 20px 30px;
     color: var(--brown);
   }
-  
-  &__control-icon path{
+
+  &__control-icon path {
     transition: all .5s;
   }
-  
+
   &__control:hover .accordion-list__control-icon path {
     fill: var(--brown);
     stroke: var(--brown);
     transition: all .5s;
   }
-  
+
   &__item--opened .accordion-list__control-icon {
     transform: rotate(90deg);
     transition: all .5s;
   }
-  
+
   &__item--opened .accordion-list__control-icon path {
     fill: var(--brown);
     stroke: var(--brown);
   }
-  
+
   &__content {
     max-height: 0;
     overflow: hidden;
     transition: all .5s;
   }
-  
+
   &__item--opened .accordion-list__content {
     max-height: 0;
     overflow: hidden;
@@ -307,21 +317,23 @@
   display: flex;
   gap: 40px;
   justify-content: center;
-  
+
 }
 
 .additional__nav-item {
   padding: 20px 0;
   transition: all .5s;
 }
+
 .additional__nav-item:hover {
   color: var(--brown);
 }
+
 .additional__nav-item:last-child {
   padding: 20px 0 40px;
 }
 
-/*======================бургер меню====================================*/ 
+/*======================бургер меню====================================*/
 
 .burger-icon {
   display: none;
@@ -334,6 +346,7 @@
   z-index: 10;
   transition: all .3s;
 }
+
 .body--opened-menu .burger-icon {
   border: 4px solid var(--brown);
 }
@@ -353,10 +366,12 @@
 .body--opened-menu .burger-icon span {
   background: transparent;
 }
+
 .burger-icon span::after {
   position: absolute;
   bottom: 10px;
 }
+
 .body--opened-menu .burger-icon span::after {
   transform: rotate(-45deg);
   position: absolute;
@@ -368,6 +383,7 @@
   position: absolute;
   top: 10px;
 }
+
 .body--opened-menu .burger-icon span::before {
   position: absolute;
   top: 0;
@@ -376,7 +392,7 @@
 }
 
 /*================header__hero=============================*/
-/*================Слайдеры=================================*/ 
+/*================Слайдеры=================================*/
 
 
 
@@ -410,21 +426,21 @@
   transform: translate(-50%, -50%);
 }
 
-/*================header__body=================================*/ 
+/*================header__body=================================*/
 
-.header{
+.header {
   &__body {
     display: flex;
     justify-content: space-between;
   }
-  
+
   &__body-content {
     display: flex;
     flex-direction: column;
     margin-left: 300px;
     max-width: 826px;
   }
-  
+
   &__body-title {
     @extend %h1-header;
     margin-bottom: 75px;
@@ -434,15 +450,15 @@
     display: flex;
     gap: 50px;
   }
-  
+
   &__body-social path {
     transition: all .5s;
   }
-  
+
   &__body-social:hover path {
     fill: var(--brown);
   }
-  
+
   &__body-img {
     display: flex;
     flex-direction: column;
@@ -462,7 +478,7 @@
     transition: all .5s;
     z-index: 1;
   }
-  
+
   &__col-number:hover {
     filter: drop-shadow(0 5px 20px var(--brown));
   }
@@ -517,6 +533,131 @@
 .header__body-momil {
   display: none
 }
+
+/*==============================footer=====================================*/
+
+.footer {
+  margin-top: 210px;
+  background: var(--brown);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 60px;
+  }
+  &__body-title {
+    max-width: 350px;
+  }
+  &__body-logo {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 30px;
+    max-width: 340px;
+  }
+  &__body-logo path{
+    transition: all .5s;
+  }
+  &__body-logo:hover path{
+    fill: var(--orange);
+  }
+
+  &__body-title {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+    transform: translateY(-10px);
+    transition: all .5s;
+  }
+ 
+  &__body-title span:first-child{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+    transition: all .5s;
+  }
+  &__body-title span{
+    @extend %text-footer;
+    transition: all .5s;
+  }
+  &__body-title:hover  span{
+    color: var(--orange);
+  }
+
+  &__body-title:hover {
+    color: var(--orange);
+  }
+
+  &__body-nav {
+    display: flex;
+    margin-left: 110px;
+    gap: 100px;
+  }
+
+  &__body-list {
+    max-width: 192px;
+  }
+
+  &__body-init {
+    @extend %text-footer;
+    padding: 4px 0;
+    transition: all .5s;
+  }
+  &__body-init:hover {
+    color: var(--orange)
+  }
+
+  &__links {
+    @extend %text-footer;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__links-socials {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__links-social path{
+    transition: all .5s;
+  }
+  &__links-social:hover path{
+    fill: var(--orange);
+  }
+
+  &__links-list {
+    
+  }
+
+  &__links-item{
+    padding: 4px 0;
+    transition: all .5s;
+  }
+  &__links-item:hover{
+    color: var(--orange);
+  }
+  &__links-item:last-child{
+    margin-top: 70px;
+  }
+}
+
+
+
+.applications {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.appStore {
+  padding: 7px 0
+}
+
+.GooglePlay {}
 
 
 /*========================================================*/

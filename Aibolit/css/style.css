@@ -167,6 +167,14 @@ address {
   color: var(--orange);
 }
 
+.footer__links, .footer__body-init, .footer__body-title span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--footer);
+}
+
 /*=====================Глобальные настройки ==========================*/
 .body {
   background-color: var(--bg);
@@ -202,6 +210,13 @@ address {
 
 .container {
   max-width: 1780px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.container-1460 {
+  max-width: 1490px;
+  padding: 0 15px;
   margin: 0 auto;
   height: 100%;
 }
@@ -344,7 +359,8 @@ address {
   opacity: 1;
   visibility: visible;
 }
-.nav__item:nth-child(3):hover .nav__link--nav path, .nav rect {
+.nav__item:nth-child(3):hover .nav__link--nav path,
+.nav rect {
   stroke: var(--brown);
   fill: var(--brown);
 }
@@ -742,10 +758,144 @@ address {
   display: none;
 }
 
+/*==============================footer=====================================*/
+.footer {
+  margin-top: 210px;
+  background: var(--brown);
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0 60px;
+}
+.footer__body-title {
+  max-width: 350px;
+}
+.footer__body-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22px;
+  margin-bottom: 30px;
+  max-width: 340px;
+}
+.footer__body-logo path {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__body-logo:hover path {
+  fill: var(--orange);
+}
+.footer__body-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4px 0;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__body-title span:first-child {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__body-title span {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__body-title:hover span {
+  color: var(--orange);
+}
+.footer__body-title:hover {
+  color: var(--orange);
+}
+.footer__body-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 110px;
+  gap: 100px;
+}
+.footer__body-list {
+  max-width: 192px;
+}
+.footer__body-init {
+  padding: 4px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__body-init:hover {
+  color: var(--orange);
+}
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__links-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+.footer__links-social path {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__links-social:hover path {
+  fill: var(--orange);
+}
+.footer__links-item {
+  padding: 4px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.footer__links-item:hover {
+  color: var(--orange);
+}
+.footer__links-item:last-child {
+  margin-top: 70px;
+}
+
+.applications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.appStore {
+  padding: 7px 0;
+}
+
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/
 @media (max-width: 1700px) {
+  /*==================Адаптив хедера====================*/
   .nav__list {
     padding-left: 0%;
     -webkit-box-pack: center;
@@ -758,6 +908,7 @@ address {
   }
 }
 @media (max-width: 1550px) {
+  /*==================Адаптив хедера====================*/
   .splide__pagination {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -840,6 +991,7 @@ address {
   }
 }
 @media (max-width: 1200px) {
+  /*==================Адаптив хедера====================*/
   .header__top-inner {
     grid-template-columns: auto 1fr auto;
     -webkit-box-pack: justify;
@@ -936,8 +1088,39 @@ address {
     display: -ms-flexbox;
     display: flex;
   }
+  /*==================Адаптив футера====================*/
+  .footer__inner {
+    display: block;
+  }
+  .footer__body-title {
+    margin: 0 auto;
+  }
+  .footer__body-logo {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: none;
+  }
+  .footer__body-nav {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    gap: 50px;
+  }
+  .footer__links {
+    margin-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 @media (max-width: 1100px) {
+  /*==================Адаптив хедера====================*/
   .header__top-inner {
     padding: 25px 15px 80px;
   }
@@ -967,13 +1150,29 @@ address {
     margin-bottom: 50px;
   }
 }
+@media (max-width: 650px) {
+  /*==================Адаптив футера====================*/
+  .footer__body-nav {
+    gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
 @media (max-width: 600px) {
+  /*==================Адаптив хедера====================*/
   .header__body-title {
     margin-bottom: 35px;
     font-size: 12vw;
   }
 }
 @media (max-width: 500px) {
+  /*==================Адаптив хедера====================*/
   .header__geolocation {
     opacity: 0;
     visibility: hidden;
