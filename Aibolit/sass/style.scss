@@ -36,12 +36,15 @@
   height: 100%;
 }
 
+
 .container-1460 {
   max-width: 1490px;
   padding: 0 15px;
   margin: 0 auto;
   height: 100%;
 }
+
+
 
 .modal {
   position: fixed;
@@ -534,6 +537,147 @@
   display: none
 }
 
+
+
+
+/*==============================about section=====================================*/
+
+.about {
+
+
+  &__inner {
+    margin-top: 150px;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 24px 24px;
+  }
+
+
+  &__item {
+    min-width: 220px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    justify-content: end;
+    transition: all .5s;
+  }
+ 
+
+  &__item:hover {
+    border: 1px solid var(--brown-light);
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    
+  }
+
+  &__item path {
+    transition: all .5s;
+  }
+  &__item:hover path {
+    fill: var(--brown);
+    transition: all .5s;
+  }
+  &__item:hover:nth-child(5) path {
+    stroke: var(--brown);
+    fill: none;
+    transition: all .5s;
+  }
+  &__item:hover:nth-child(13) path {
+    stroke: var(--brown);
+    fill: none;
+    transition: all .5s;
+  }
+
+
+  &__link {}
+
+
+  &__title {
+    @extend %h4-section1;
+  }
+
+
+  &__link-body {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 160px;
+  }
+
+
+  &__text {
+    @extend %text-section1;
+  }
+
+
+  &__img svg {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+
+.about-visibl {
+  display: none;
+}
+
+.about__mobile-visibl {
+  display: none;
+}
+
+
+#content-about {
+  margin: 25px 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+#toggleButton{
+  display: flex;
+  border-radius: 33px;
+  width: 284px;
+  height: 66px;
+  box-shadow: 0 4px 20px 0 var(--orange);
+  background: var(--orange);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  transition: all .5s;
+  padding: 0 30px;
+}
+
+#toggleButton:hover {
+  background: var(--brown);
+  box-shadow: none;
+}
+
+
+
+/*==============================footer=====================================*/
+
+#specialists__text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+#specialists__text-button {
+
+}
+
 /*==============================footer=====================================*/
 
 .footer {
@@ -545,19 +689,23 @@
     justify-content: space-between;
     padding: 80px 0 60px;
   }
+
   &__body-title {
     max-width: 350px;
   }
+
   &__body-logo {
     display: flex;
     gap: 22px;
     margin-bottom: 30px;
     max-width: 340px;
   }
-  &__body-logo path{
+
+  &__body-logo path {
     transition: all .5s;
   }
-  &__body-logo:hover path{
+
+  &__body-logo:hover path {
     fill: var(--orange);
   }
 
@@ -568,19 +716,21 @@
     transform: translateY(-10px);
     transition: all .5s;
   }
- 
-  &__body-title span:first-child{
+
+  &__body-title span:first-child {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 50px;
     color: #fff;
     transition: all .5s;
   }
-  &__body-title span{
+
+  &__body-title span {
     @extend %text-footer;
     transition: all .5s;
   }
-  &__body-title:hover  span{
+
+  &__body-title:hover span {
     color: var(--orange);
   }
 
@@ -603,6 +753,7 @@
     padding: 4px 0;
     transition: all .5s;
   }
+
   &__body-init:hover {
     color: var(--orange)
   }
@@ -610,6 +761,7 @@
   &__links {
     @extend %text-footer;
   }
+
   &__links {
     display: flex;
     flex-direction: column;
@@ -621,25 +773,26 @@
     margin-bottom: 30px;
   }
 
-  &__links-social path{
+  &__links-social path {
     transition: all .5s;
   }
-  &__links-social:hover path{
+
+  &__links-social:hover path {
     fill: var(--orange);
   }
 
-  &__links-list {
-    
-  }
+  &__links-list {}
 
-  &__links-item{
+  &__links-item {
     padding: 4px 0;
     transition: all .5s;
   }
-  &__links-item:hover{
+
+  &__links-item:hover {
     color: var(--orange);
   }
-  &__links-item:last-child{
+
+  &__links-item:last-child {
     margin-top: 70px;
   }
 }

@@ -117,4 +117,24 @@
   headerSlider.mount();
 
 
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    let content = document.getElementById('content-about');
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+});
+
+document.getElementById('specialists__text-button').addEventListener('click', function() {
+  var content = document.getElementById('specialists__text');
+  if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+  } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+  }
+});
+
 })()
+
+
