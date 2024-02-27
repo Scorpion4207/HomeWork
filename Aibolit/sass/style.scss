@@ -589,15 +589,11 @@
     fill: none;
     transition: all .5s;
   }
-  &__item:hover:nth-child(13) path {
+  &__item:hover:nth-child(12) path {
     stroke: var(--brown);
     fill: none;
     transition: all .5s;
   }
-
-
-  &__link {}
-
 
   &__title {
     @extend %h4-section1;
@@ -665,6 +661,23 @@
 }
 
 
+
+.slider {
+  position: relative;
+}
+
+.splide {
+  display: block;
+}
+
+.show-all {
+  height: auto;
+  overflow: visible;
+}
+
+// .hide-arrows {
+//   display: none;
+// }
 
 /*==============================footer=====================================*/
 

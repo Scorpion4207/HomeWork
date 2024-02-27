@@ -105,10 +105,8 @@
   })
 
   headerSlider.on('pagination:mounted', function (data) {
-    // You can add your class to the UL element
     data.list.classList.add('splide__pagination--custom');
 
-    // `items` contains all dot items
     data.items.forEach(function (item) {
       item.button.textContent = String(item.page + 1);
     });
@@ -116,7 +114,7 @@
 
   headerSlider.mount();
 
-
+// ==============================Скрыть или открыть контент about===========================
   document.getElementById('toggleButton').addEventListener('click', function() {
     let content = document.getElementById('content-about');
     if (content.style.maxHeight) {
@@ -126,12 +124,42 @@
     }
 });
 
+// ==============================Скрыть или открыть контент specialists__top===========================
 document.getElementById('specialists__text-button').addEventListener('click', function() {
   var content = document.getElementById('specialists__text');
   if (content.style.maxHeight) {
       content.style.maxHeight = null;
   } else {
       content.style.maxHeight = content.scrollHeight + "px";
+  }
+});
+
+
+const specialistsSplide = new Splide('#specialists__bottom-splide', {
+  type       : 'fade',
+  pagination : false,
+})
+
+specialistsSplide.mount();
+
+
+const showAllButton = document.getElementById('showAllButton');
+
+showAllButton.addEventListener('click', () => {
+  specialistsSplide.destroy();
+  document.querySelector('#specialists__bottom-splide').classList.add('show-all');
+  document.querySelector('#specialists__bottom-splide').classList.add('hide-arrows');
+
+  if (showAllButton.textContent === 'Показать все') {
+    showAllButton.textContent = 'Скрыть';
+  } else {
+    showAllButton.textContent = 'Показать все';
+    document.querySelector('#specialists__bottom-splide').classList.remove('show-all');
+    document.querySelector('#specialists__bottom-splide').classList.remove('hide-arrows');
+
+    setTimeout(() => {
+      specialistsSplide.mount();
+    }, 100);
   }
 });
 

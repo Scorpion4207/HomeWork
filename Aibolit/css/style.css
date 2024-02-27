@@ -813,7 +813,7 @@ address {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.about__item:hover:nth-child(13) path {
+.about__item:hover:nth-child(12) path {
   stroke: var(--brown);
   fill: none;
   -webkit-transition: all 0.5s;
@@ -883,6 +883,19 @@ address {
   background: var(--brown);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.slider {
+  position: relative;
+}
+
+.splide {
+  display: block;
+}
+
+.show-all {
+  height: auto;
+  overflow: visible;
 }
 
 /*==============================footer=====================================*/
