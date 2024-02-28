@@ -19,8 +19,8 @@
   /*==================Адаптив хедера====================*/
   .splide__pagination {
     display: flex;
-    gap: 70px;
-    transform: translateY(50px);
+    gap: 40px;
+    transform: translateY(80px);
   }
 
   .header {
@@ -280,6 +280,27 @@
   }
 }
 
+@media (max-width: 800px) {
+  /*==============================statistics=====================================*/
+
+
+.statistics {
+  &__title {
+    font-size: 80px;
+  }
+
+  &__text {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+  }
+  &__text img{
+    position: absolute;
+    right: 5%;
+  }
+}
+}
+
 @media (max-width: 700px) {
 
   /*==================Адаптив about====================*/
@@ -336,7 +357,25 @@
 
 
 @media (max-width: 500px) {
+  /*==============================statistics=====================================*/
 
+
+.statistics {
+  margin: 50px 0;
+  &__title {
+    font-size: 60px;
+  }
+
+  &__text {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+  }
+  &__text img{
+    position: absolute;
+    right: -5%;
+  }
+}
   /*==================Адаптив хедера====================*/
   .header__geolocation {
     opacity: 0;

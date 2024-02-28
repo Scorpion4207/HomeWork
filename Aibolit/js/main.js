@@ -114,54 +114,85 @@
 
   headerSlider.mount();
 
-// ==============================Скрыть или открыть контент about===========================
-  document.getElementById('toggleButton').addEventListener('click', function() {
+  // ==============================Скрыть или открыть контент about===========================
+
+  const toggleButton = document.getElementById('toggleButton');
+
+  document.getElementById('toggleButton').addEventListener('click', function () {
     let content = document.getElementById('content-about');
     if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-});
-
-// ==============================Скрыть или открыть контент specialists__top===========================
-document.getElementById('specialists__text-button').addEventListener('click', function() {
-  var content = document.getElementById('specialists__text');
-  if (content.style.maxHeight) {
       content.style.maxHeight = null;
-  } else {
+      toggleButton.textContent = 'ПОКАЗАТЬ УСЛУГИ';
+    } else {
       content.style.maxHeight = content.scrollHeight + "px";
-  }
-});
+      toggleButton.textContent = 'СКРЫТЬ УСЛУГИ';
+    }
+  });
+
+  // ==============================Скрыть или открыть контент specialists__top===========================
+  const textButtonHistory = document.getElementById('specialists__text-button');
+
+  document.getElementById('specialists__text-button').addEventListener('click', function () {
+    
+
+    let content = document.getElementById('specialists__text');
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      textButtonHistory.textContent = 'ЧИТАТЬ ДАЛЕЕ...';
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      textButtonHistory.textContent = 'СКРЫТЬ';
+
+    }
+  });
+
+  // ==============================Слайдер со специалистами===========================
+  const specialistsSplide = new Splide('#specialists__bottom-splide', {
+    perPage:6,
+    pagination: false,
+    width:1000,
+    perMove: 1,
+    gap: 15,
+    breakpoints: {
+      1200: {
+        perPage:4,
+        width:600,
+      },
+      800: {
+        width:400,
+      },
+      550: {
+        perPage:2,
+        width:300,
+      },
+      450: {
+        perPage:2,
+        width:200,
+      },
+       
+    }
+  })
+
+  specialistsSplide.mount();
 
 
-const specialistsSplide = new Splide('#specialists__bottom-splide', {
-  type       : 'fade',
-  pagination : false,
-})
+  const showAllButton = document.getElementById('showAllButton');
+  let splideArrows = document.querySelector('.splide__arrows')
 
-specialistsSplide.mount();
+  showAllButton.addEventListener('click', () => {
+    specialistsSplide.destroy();
 
 
-const showAllButton = document.getElementById('showAllButton');
-
-showAllButton.addEventListener('click', () => {
-  specialistsSplide.destroy();
-  document.querySelector('#specialists__bottom-splide').classList.add('show-all');
-  document.querySelector('#specialists__bottom-splide').classList.add('hide-arrows');
-
-  if (showAllButton.textContent === 'Показать все') {
-    showAllButton.textContent = 'Скрыть';
-  } else {
-    showAllButton.textContent = 'Показать все';
-    document.querySelector('#specialists__bottom-splide').classList.remove('show-all');
-    document.querySelector('#specialists__bottom-splide').classList.remove('hide-arrows');
-
-    setTimeout(() => {
-      specialistsSplide.mount();
-    }, 100);
-  }
-});
+    if (showAllButton.textContent === 'Показать все') {
+      showAllButton.textContent = 'Скрыть';
+      splideArrows.style.display = 'none';
+    } else {
+      showAllButton.textContent = 'Показать все';
+      setTimeout(() => {
+        specialistsSplide.mount();
+      }, 100);
+    }
+  });
 
 })()
 
