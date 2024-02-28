@@ -168,8 +168,7 @@
       450: {
         perPage:2,
         width:200,
-      },
-       
+      },  
     }
   })
 
@@ -183,11 +182,11 @@
     specialistsSplide.destroy();
 
 
-    if (showAllButton.textContent === 'Показать все') {
+    if (showAllButton.textContent === 'Показать всех специалистов') {
       showAllButton.textContent = 'Скрыть';
       splideArrows.style.display = 'none';
     } else {
-      showAllButton.textContent = 'Показать все';
+      showAllButton.textContent = 'Показать всех специалистов';
       setTimeout(() => {
         specialistsSplide.mount();
       }, 100);

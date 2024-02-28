@@ -805,8 +805,8 @@
   margin: 150px 0;
 
   &__inner {
-  max-width: 720px;
-  margin: 0 auto;
+    max-width: 720px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -827,7 +827,8 @@
     color: var(--text);
     position: relative;
   }
-  &__text img{
+
+  &__text img {
     position: absolute;
     right: 20%;
     z-index: -1;
@@ -837,12 +838,17 @@
 /*==============================mrits=====================================*/
 
 .mrits {
-  margin-top: 200px;
-  &__inner {
-    
-  }
+  margin-top: 250px;
+
+  &__inner {}
+
   &__title {
+    @extend %h3-section2-4-6;
+    text-align: center;
+    color: var(--brown);
+    margin-bottom: 100px;
   }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
@@ -851,19 +857,35 @@
     margin-bottom: 25px;
     gap: 70px 24px;
   }
-  &__item {
-  }
+
+  &__item {}
+
   &__link-title {
+    @extend %text-orange-section2;
+    background: transparent;
+    transition: all .5s;
+    color: var(--brown);
+    margin-bottom: 35px;
   }
+
   &__link-body {
     display: flex;
+    gap: 50px;
   }
+
   &__link-img {
     align-self: center;
-    max-width: 80px;
+    width: 80px;
   }
+
   &__link-text {
-    max-width: 320px;
+    max-width: 300px;
+    min-height: 118px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--brown);
   }
 }
 

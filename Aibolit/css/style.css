@@ -151,7 +151,7 @@ address {
   color: var(--brown);
 }
 
-.specialists__title {
+.mrits__title, .specialists__title {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 40px;
@@ -175,7 +175,7 @@ address {
   color: var(--brown);
 }
 
-#showAllButton, #specialists__text-button, .header__geolocation, .header__geolocation-mobil {
+.mrits__link-title, #showAllButton, #specialists__text-button, .header__geolocation, .header__geolocation-mobil {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
@@ -1072,7 +1072,12 @@ address {
 
 /*==============================mrits=====================================*/
 .mrits {
-  margin-top: 200px;
+  margin-top: 250px;
+}
+.mrits__title {
+  text-align: center;
+  color: var(--brown);
+  margin-bottom: 100px;
 }
 .mrits__list {
   display: grid;
@@ -1084,18 +1089,32 @@ address {
   margin-bottom: 25px;
   gap: 70px 24px;
 }
+.mrits__link-title {
+  background: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: var(--brown);
+  margin-bottom: 35px;
+}
 .mrits__link-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 50px;
 }
 .mrits__link-img {
   -ms-flex-item-align: center;
       align-self: center;
-  max-width: 80px;
+  width: 80px;
 }
 .mrits__link-text {
-  max-width: 320px;
+  max-width: 300px;
+  min-height: 118px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--brown);
 }
 
 /*==============================footer=====================================*/
