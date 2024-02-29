@@ -192,6 +192,11 @@ address {
 }
 
 /*=====================Глобальные настройки ==========================*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+}
+
 .body {
   background-color: var(--bg);
 }
