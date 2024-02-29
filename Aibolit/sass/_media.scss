@@ -89,15 +89,38 @@
 @media (max-width: 1385px) {
   .about__grid-column {
     grid-column: 1 / -1
-  }  
-  
+  }
+
   .about-visibl {
     display: block;
   }
-  
+
   .about-hidden {
     display: none;
   }
+
+
+
+  .mobile-app {
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 1228px) {
+  .mrits__item-hidden {
+    display: none;
+  }
+
+  .mrits__item-visible {
+    display: block;
+  }
+
+  .mrits__item-column {
+    grid-column: 1 / -1;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -264,17 +287,27 @@
   .button {
     margin-bottom: 50px;
   }
+
+  .mobile-app {
+    &__text {
+      font-size: 15px;
+    }
+    &__title {
+      font-size: 40px;
+    }
+  }
+
 }
 
 @media (max-width: 1037px) {
   .about__grid-column {
     grid-column: auto;
-  }  
-  
+  }
+
   .about-visibl {
     display: none;
   }
-  
+
   .about-hidden {
     display: block;
   }
@@ -284,21 +317,55 @@
   /*==============================statistics=====================================*/
 
 
-.statistics {
-  &__title {
-    font-size: 80px;
+  .statistics {
+    &__title {
+      font-size: 80px;
+    }
+
+    &__text {
+      font-size: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    &__text img {
+      position: absolute;
+      right: 5%;
+    }
   }
 
-  &__text {
-    font-size: 30px;
-    text-align: center;
-    position: relative;
+  .mobile-app {
+    margin-top: 150px;
+    padding: 50px 0;
+    background: var(--orange);
+  
+    &__inner {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    &__body {
+      align-self: center;
+      justify-self: center;
+    }
+  
+    &__text {
+      font-size: 15px;
+    }
+  
+    &__title {
+      font-size: 30px;
+    }
+
+    &__applications {
+      justify-content: center;
+    }
+  
+    &__img {
+      display: none;
+    }
   }
-  &__text img{
-    position: absolute;
-    right: 5%;
-  }
-}
 }
 
 @media (max-width: 700px) {
@@ -341,6 +408,7 @@
     &__inner {
       margin-top: 80px;
     }
+
     &__list {
       grid-template-columns: repeat(auto-fill, minmax(320px, 420px));
     }
@@ -350,6 +418,7 @@
   .about__mobile-hidden {
     display: none;
   }
+
   .about__mobile-visibl {
     display: block;
   }
@@ -360,22 +429,25 @@
   /*==============================statistics=====================================*/
 
 
-.statistics {
-  margin: 50px 0;
-  &__title {
-    font-size: 60px;
+  .statistics {
+    margin: 50px 0;
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__text {
+      font-size: 25px;
+      text-align: center;
+      position: relative;
+    }
+
+    &__text img {
+      position: absolute;
+      right: -5%;
+    }
   }
 
-  &__text {
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-  }
-  &__text img{
-    position: absolute;
-    right: -5%;
-  }
-}
   /*==================Адаптив хедера====================*/
   .header__geolocation {
     opacity: 0;
@@ -477,4 +549,34 @@
       font-size: 25px;
     }
   }
+
+
+  .mobile-app {
+    margin-top: 50px;
+  }
+
+
+}
+
+@media (max-width: 450px) {
+  #showAllButton {
+    display: none;
+  }
+
+  .mrits {
+    &__list {
+      text-align: center;
+      gap: 25px 24px;
+    }
+
+    &__link-body {
+      display: block;
+      text-align: center;
+    }
+
+    &__link-img {
+      margin: 0 auto 10px;
+    }
+  }
+
 }

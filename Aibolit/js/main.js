@@ -196,7 +196,39 @@
   });
 
 
-  
+
+  const mritsListButton = document.getElementById('mritsListButton');
+
+  document.getElementById('mritsListButton').addEventListener('click', function () {
+
+    let content = document.getElementById('mrits-list');
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      mritsListButton.textContent = 'ПОКАЗАТЬ РЕКОМЕНДАЦИИ';
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      mritsListButton.textContent = 'СКРЫТЬ РЕКОМЕНДАЦИИ';
+    }
+
+  });
+
+  ymaps.ready(init);
+
+function init() {
+  var map = new ymaps.Map("map", {
+    center: [55.60804306913301,37.615973499999946], // ваши данные
+    zoom: 15
+  });
+
+  map.controls.remove('geolocationControl'); 
+  map.controls.remove('searchControl'); 
+  map.controls.remove('trafficControl'); 
+  map.controls.remove('typeSelector'); 
+  map.controls.remove('fullscreenControl'); 
+  map.controls.remove('zoomControl'); 
+  map.controls.remove('rulerControl');
+  map.behaviors.disable(['scrollZoom']);
+}
 
 })()
 

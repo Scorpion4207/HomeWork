@@ -840,8 +840,6 @@
 .mrits {
   margin-top: 250px;
 
-  &__inner {}
-
   &__title {
     @extend %h3-section2-4-6;
     text-align: center;
@@ -858,7 +856,6 @@
     gap: 70px 24px;
   }
 
-  &__item {}
 
   &__link-title {
     @extend %text-orange-section2;
@@ -888,6 +885,96 @@
     color: var(--brown);
   }
 }
+
+
+.mrits__item-visible {
+  display: none;
+}
+
+#mrits-list {
+  margin: 60px 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+#mritsListButton {
+  display: flex;
+  border-radius: 33px;
+  width: 284px;
+  height: 66px;
+  box-shadow: 0 4px 20px 0 var(--orange);
+  background: var(--orange);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  transition: all .5s;
+  padding: 0 30px;
+  text-align: center;
+}
+
+#mritsListButton:hover {
+  background: var(--brown);
+  box-shadow: none;
+}
+
+
+/*==============================mobile-app=====================================*/
+
+
+.mobile-app {
+  margin-top: 150px;
+  padding: 50px 0;
+  background: var(--orange);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__body {
+    align-self: center;
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 0.67;
+    color: #fff;
+  }
+
+  &__title {
+    @extend %h1-header;
+    color: #fff;
+    max-width: 940px;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    transform: translateX(-10%);
+  }
+
+  &__img img {
+    width: 100%;
+  }
+}
+
+
+/*==============================Contacts=====================================*/
+
+
+.contacts__map {
+  width: 950px;
+  height: 580px;
+  background-color: #59443F;
+}
+
 
 /*==============================footer=====================================*/
 
