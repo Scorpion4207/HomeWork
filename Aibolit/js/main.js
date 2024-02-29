@@ -118,12 +118,7 @@
 
   const toggleButton = document.getElementById('toggleButton');
 
-  document.getElementById('toggleButton').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    window.scrollTo(0, scrollPosition);
+  document.getElementById('toggleButton').addEventListener('click', function () {
 
     let content = document.getElementById('content-about');
     if (content.style.maxHeight) {
@@ -185,8 +180,7 @@
   const showAllButton = document.getElementById('showAllButton');
   let splideArrows = document.querySelector('.splide__arrows')
 
-  showAllButton.addEventListener('click', function (e) {
-    e.preventDefault();
+  showAllButton.addEventListener('click', function () {
     specialistsSplide.destroy();
 
 
