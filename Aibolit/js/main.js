@@ -118,7 +118,8 @@
 
   const toggleButton = document.getElementById('toggleButton');
 
-  document.getElementById('toggleButton').addEventListener('click', function () {
+  document.getElementById('toggleButton').addEventListener('click', function (e) {
+    e.preventDefault();
     let content = document.getElementById('content-about');
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
@@ -178,7 +179,8 @@
   const showAllButton = document.getElementById('showAllButton');
   let splideArrows = document.querySelector('.splide__arrows')
 
-  showAllButton.addEventListener('click', () => {
+  showAllButton.addEventListener('click', function (e) {
+    e.preventDefault();
     specialistsSplide.destroy();
 
 
@@ -192,6 +194,9 @@
       }, 100);
     }
   });
+
+
+  
 
 })()
 
