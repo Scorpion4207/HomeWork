@@ -120,6 +120,11 @@
 
   document.getElementById('toggleButton').addEventListener('click', function (e) {
     e.preventDefault();
+
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    window.scrollTo(0, scrollPosition);
+
     let content = document.getElementById('content-about');
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
