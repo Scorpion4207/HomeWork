@@ -1724,6 +1724,9 @@ html {
 }
 @media (max-width: 800px) {
   /*==============================statistics=====================================*/
+  .more-detailed {
+    padding: 30px 0;
+  }
   .statistics__title {
     font-size: 80px;
   }
