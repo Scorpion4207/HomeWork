@@ -121,7 +121,7 @@
   document.getElementById('toggleButton').addEventListener('click', function (e) {
     e.preventDefault();
 
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
     window.scrollTo(0, scrollPosition);
 
@@ -133,6 +133,7 @@
       content.style.maxHeight = content.scrollHeight + "px";
       toggleButton.textContent = 'СКРЫТЬ УСЛУГИ';
     }
+
   });
 
   // ==============================Скрыть или открыть контент specialists__top===========================
